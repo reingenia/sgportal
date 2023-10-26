@@ -1,0 +1,142 @@
+main {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cardform {
+    padding: 32px;
+    width: 660px;
+    border-color: rgba(225, 225, 230, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.cardform .main {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.cardform .main .success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    margin-top: 20px 0;
+}
+
+.cardform .main .success .login {
+    width: 139px;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+.cardform .main .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.cardform .main .title .name {
+    color: var(--Black, #0C141C);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.364px;
+}
+
+.cardform .main .input {
+    padding: 5px 0 10px 0;
+}
+
+.cardform .main .input label {
+    color: var(--grey-900, #111B2B);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+}
+
+.cardform .main .input .normal {
+    display: block;
+    padding: 8px;
+    border: 1px solid var(--grey-300, #CFD9E0);
+    border-radius: 6px;
+    box-shadow: 0px 2px 0px 0px rgba(231, 235, 238, 0.20) inset;
+    background: var(--White, #FFF);
+    margin-top: 5px;
+    color: var(--grey-500, #67728A);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+    width: 97%;
+}
+
+.cardform .footer {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.cardform .footer div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    margin-top: 10px;
+}
+
+.cardform .footer button {
+    width: 158px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 76px;
+    border: 1px solid #5F504D;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase; 
+}
+
+.cardform .footer span {
+    color: rgba(37, 37, 37, 0.50);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+}
+
+.cardform .footer .btn1 {
+    color: #5F504D;
+    background-color: white;
+}
+
+.cardform .footer .btn2 {
+    color: white;
+    background-color: rgba(95, 80, 77, 1);
+}

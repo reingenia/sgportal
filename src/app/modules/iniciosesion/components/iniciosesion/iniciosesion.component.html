@@ -1,0 +1,30 @@
+<app-header></app-header>
+<main>
+    <div class="cardform">
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/iniciarsesion/login.png'" alt="login" class="login" />
+            </div>
+            <div class="title">
+                <div class="name">
+                    Iniciar sesión
+                </div>
+            </div>
+            <div class="input">
+                <label>Correo electrónico</label>
+                <input type="text" class="normal" placeholder="Ingresa tu correo electrónico" />
+            </div>
+            <div class="input">
+                <label>Contraseña</label>
+                <input type="text" class="normal" placeholder="Ingresa tu contraseña" />
+            </div>
+        </div>
+        <div class="footer">
+            <span (click)="navigateToLostPassword()">Olvidé mi contraseña</span>
+            <div>
+                <button class="btn1">crear&nbsp;cuenta</button>
+                <button class="btn2">ingresar</button>
+            </div>
+        </div>
+    </div>
+</main>

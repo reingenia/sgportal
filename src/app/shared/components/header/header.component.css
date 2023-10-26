@@ -1,0 +1,37 @@
+header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.spacer {
+    flex: 1;
+}
+
+button {
+    border-radius: 76px;
+    border: 1px solid #5F504D;
+    padding: 18px 24px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    font-stretch: normal;
+    height: auto;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+
+.btn1 {
+    color: #5F504D;
+    background-color: white;
+}
+
+.btn2 {
+    color: white;
+    background-color: rgba(95, 80, 77, 1);
+}

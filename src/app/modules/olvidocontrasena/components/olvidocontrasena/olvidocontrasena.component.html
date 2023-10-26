@@ -1,0 +1,79 @@
+<app-header></app-header>
+<main>
+    <div class="cardform" *ngIf="step===1">
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/olvidocontrasena/lostpassword.png'" alt="lostpassword" class="lostpassword" />
+            </div>
+            <div class="title">
+                <div class="name">
+                    ¿Olvidó su contraseña?
+                </div>
+                <div class="description" style="text-align: center;">
+                    Para establecer una nueva contraseña debe ingresar su correo electrónico.<br />Recibirá un enlace para crear una nueva.
+                </div>
+            </div>
+            <div class="input">
+                <label>Correo electrónico</label>
+                <input type="text" class="normal" placeholder="Ingresa tu correo electrónico" />
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <button (click)="nextStep()" class="btn2">confirmar</button>
+            </div>
+        </div>
+    </div>
+    <div class="cardform" *ngIf="step===2">
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/olvidocontrasena/sendmail.png'" alt="success"  class="sendmail" />
+            </div>
+            <div class="note">
+                <div class="left">
+                    <img [src]="'assets/images/registro/icon-checknote.svg'" alt="select" class="icon" />
+                </div>
+                <div class="right">
+                    <div class="title">Revise su correo electrónico</div>
+                    <div class="body">Le hemos enviado un correo electrónico con un enlace para crear una nueva contraseña.</div>
+                    <div class="link" (click)="nextStep()">Volver a enviar el correo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cardform" *ngIf="step===3">
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/olvidocontrasena/newpassword.png'" alt="success"  class="newpassword" />
+            </div>
+            <div class="title">
+                <div class="name">
+                    Crear nueva contraseña
+                </div>
+                <div class="description" style="text-align: center;">
+                    Por favor ingresa tu nueva contraseña.
+                </div>
+            </div>
+            <div class="input">
+                <label>Contraseña</label>
+                <input type="text" class="normal" placeholder="Ingrese una contraseña" />
+                <ul class="password-detail">
+                    <li>Más de 7 caracteres</li>
+                    <li>Al menos 1 mayúscula</li>
+                    <li>Al menos 1 minúscula</li>
+                    <li>Al menos 1 caracter especial</li>
+                    <li>Al menos 1 número</li>
+                </ul>
+            </div>
+            <div class="input">
+                <label>Confirmar contraseña</label>
+                <input type="text" class="normal" placeholder="Repita la contraseña" />
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <button class="btn2" (click)="nextStep()">enviar</button>
+            </div>
+        </div>
+    </div>
+</main>

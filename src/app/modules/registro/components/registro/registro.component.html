@@ -1,0 +1,247 @@
+<app-header></app-header>
+<main>
+    <div class="cardform" *ngIf="step===1">
+        <div class="header">
+            <div class="steps">
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Crea tu cuenta</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #CCB8A7;">
+                        <span style="color: #FFF;">2</span>
+                    </div>
+                    <span class="text1">Datos personales</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #E1E1E6;">
+                        <span style="color: #8D8D99;">3</span>
+                    </div>
+                    <span class="text2">Validación</span>
+                </div>
+            </div>
+            <img [src]="'assets/images/registro/divider.svg'" alt="divider" class="divider" />
+        </div>
+        <div class="main">
+            <div class="input">
+                <label>Nombres</label>
+                <input type="text" class="normal" placeholder="Nombres" />
+            </div>
+            <div class="input">
+                <label>Apellidos</label>
+                <input type="text" class="normal" placeholder="Apellido paterno y materno" />
+            </div>
+            <div class="input">
+                <label>Contraseña</label>
+                <input type="text" class="normal" placeholder="Ingrese una contraseña" />
+                <ul class="password-detail">
+                    <li>Más de 7 caracteres</li>
+                    <li>Al menos 1 mayúscula</li>
+                    <li>Al menos 1 minúscula</li>
+                    <li>Al menos 1 caracter especial</li>
+                    <li>Al menos 1 número</li>
+                </ul>
+            </div>
+            <div class="input">
+                <label>Confirmar contraseña</label>
+                <input type="text" class="normal" placeholder="Repita la contraseña" />
+            </div>
+        </div>
+        <div class="footer">
+            <span>Todos los campos son requeridos.</span>
+            <div>
+                <button class="btn1">volver</button>
+                <button class="btn2" (click)="nextStep()">continuar</button>
+            </div>
+        </div>
+    </div>
+    <div class="cardform" *ngIf="step===2">
+        <div class="header">
+            <div class="steps">
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Crea tu cuenta</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Datos personales</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #CCB8A7;">
+                        <span style="color: #FFF;">3</span>
+                    </div>
+                    <span class="text2">Validación</span>
+                </div>
+            </div>
+            <img [src]="'assets/images/registro/divider.svg'" alt="divider" class="divider" />
+        </div>
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/registro/sendmail.png'" alt="success"  class="sendmail" />
+            </div>
+            <div class="note">
+                <div class="left">
+                    <img [src]="'assets/images/registro/icon-checknote.svg'" alt="select" class="icon" />
+                </div>
+                <div class="right">
+                    <div class="title">Tu registro a sido exitoso</div>
+                    <div class="body">Te hemos enviado un correo electrónico para validar el registro de tu cuenta. Por favor, revisa tu correo para activar tu cuenta.</div>
+                    <div class="link" (click)="nextStep()">Volver a enviar el correo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cardform" *ngIf="step===3">
+        <div class="header">
+            <div class="steps">
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Crea tu cuenta</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Datos personales</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #CCB8A7;">
+                        <span style="color: #FFF;">3</span>
+                    </div>
+                    <span class="text2">Validación</span>
+                </div>
+            </div>
+            <img [src]="'assets/images/registro/divider.svg'" alt="divider" class="divider" />
+        </div>
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/registro/sendsms.png'" alt="success" class="sendsms" />
+            </div>
+            <div class="title">
+                <div class="name">
+                    Valida tu celular
+                </div>
+                <div class="description">
+                    Por favor ingresa tu número de celular
+                </div>
+            </div>
+            <div class="input">
+                <label>Número de celular</label>
+                <input type="text" class="normal" placeholder="Ingresa tu celular" />
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <button (click)="nextStep()" class="btn2">confirmar</button>
+            </div>
+        </div>
+    </div>
+    <div class="cardform" *ngIf="step===4">
+        <div class="header">
+            <div class="steps">
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Crea tu cuenta</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Datos personales</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #CCB8A7;">
+                        <span style="color: #FFF;">3</span>
+                    </div>
+                    <span class="text2">Validación</span>
+                </div>
+            </div>
+            <img [src]="'assets/images/registro/divider.svg'" alt="divider" class="divider" />
+        </div>
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/registro/smscode.png'" alt="success" class="smscode" />
+            </div>
+            <div class="title">
+                <div class="name">
+                    Valida tu celular
+                </div>
+                <div class="description" style="max-width: 333px; text-align: center;">
+                    Ingresa el código que te enviamos por SMS al número celular +593 999 99999 para validar tu número.
+                </div>
+            </div>
+            <div class="input" style="text-align: center;">
+                <input type="text" class="codesms" placeholder="       -       -       -       -       -" />
+            </div>
+            <div class="subtitle">Enviar nuevamente el código.</div>
+        </div>
+        <div class="footer">
+            <div>
+                <button (click)="nextStep()" class="btn2">continuar</button>
+            </div>
+        </div>
+    </div>
+    <div class="cardform" *ngIf="step===5">
+        <div class="header">
+            <div class="steps">
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Crea tu cuenta</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text1">Datos personales</span>
+                </div>
+                <img [src]="'assets/images/registro/icon-next.svg'" alt="iconnext" class="next" />
+                <div class="step">
+                    <div class="select" style="background-color: #1D8841;">
+                        <img [src]="'assets/images/registro/icon-check.svg'" alt="select" class="icon" />
+                    </div>
+                    <span class="text2">Validación</span>
+                </div>
+            </div>
+            <img [src]="'assets/images/registro/divider.svg'" alt="divider" class="divider" />
+        </div>
+        <div class="main">
+            <div class="success">
+                <img [src]="'assets/images/registro/congratulation.png'" alt="success" class="congratulation" />
+            </div>
+            <div class="title">
+                <div class="name">
+                    Felicitaciones
+                </div>
+                <div class="description" style="text-align: center;">
+                    Estimado cliente, su cuenta ha sido activada correctamente.<br />Ahora puede iniciar sesión.
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <button (click)="nextStep()" class="btn2">ingresar</button>
+            </div>
+        </div>
+    </div>
+</main>
